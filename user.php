@@ -158,7 +158,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" name="q" placeholder="Cari Nama atau Username..." value="<?php echo htmlspecialchars($search); ?>">
                     <?php if ($search != ""): ?>
-                        <button type="button" class="tambah-button" onclick="window.location.href='mahasiswa.php'">Reset</button>
+                        <button type="button" class="tambah-button" onclick="window.location.href='tambah_user.php'">Reset</button>
                     <?php else: ?>
                         <button type="submit" class="tambah-button">Cari</button>
                     <?php endif; ?>
@@ -168,7 +168,7 @@
         <!-- Header dengan judul di kiri dan tombol add di kanan -->
         <div class="table-header">
             <h1>Data Staff</h1>
-            <button class="tambah-button" onclick="window.location.href='tambah.php'">Tambah Staff</button>
+            <button class="tambah-button" onclick="window.location.href='tambah_user.php'">Tambah Staff</button>
         </div>
         <div class="table-container">
             <table border="1" cellpadding="5" cellspacing="0">
@@ -190,7 +190,7 @@
                         <td>tarri@example.com</td>
                         <td>Admin</td>
                         <td>
-                            <button class='edit-button'>Edit</button>
+                        <button class='edit-button' onclick="window.location.href='edit_user.php?id=1'">Edit</button>
                             <button class='hapus-button'>Hapus</button>
                         </td>
                     </tr>
@@ -201,7 +201,7 @@
                         <td>andi@example.com</td>
                         <td>Kasir</td>
                         <td>
-                            <button class='edit-button'>Edit</button>
+                        <button class='edit-button' onclick="window.location.href='edit_user.php?id=2'">Edit</button>
                             <button class='hapus-button'>Hapus</button>
                         </td>
                     </tr>
