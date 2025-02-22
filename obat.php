@@ -1,10 +1,57 @@
+<?php
+// Simulasi data barang dalam array
+$barang = [
+    1 => [
+        "id" => 1,
+        "kode" => "TB001",
+        "nama" => "Paracetamol",
+        "jenis" => "Tablet",
+        "kategori" => "Obat Bebas",
+        "harga_jual" => 5000
+    ],
+    2 => [
+        "id" => 2,
+        "kode" => "KP001",
+        "nama" => "Amoxicillin",
+        "jenis" => "Kapsul",
+        "kategori" => "Antibiotik",
+        "harga_jual" => 15000
+    ],
+    3 => [
+        "id" => 3,
+        "kode" => "TB002",
+        "nama" => "Vitamin C 500mg",
+        "jenis" => "Tablet",
+        "kategori" => "Suplemen",
+        "harga_jual" => 10000
+    ],
+    4 => [
+        "id" => 4,
+        "kode" => "CR001",
+        "nama" => "Betadine",
+        "jenis" => "Cair",
+        "kategori" => "Antiseptik",
+        "harga_jual" => 20000
+    ],
+    5 => [
+        "id" => 5,
+        "kode" => "SP001",
+        "nama" => "Salep Kortikosteroid",
+        "jenis" => "Salep",
+        "kategori" => "Obat Kulit",
+        "harga_jual" => 18000
+    ]
+];
+?>
+
+
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Staff</title>
+    <title>Data Obat</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Sertakan Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -158,7 +205,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" name="q" placeholder="Cari Nama atau Username..." value="<?php echo htmlspecialchars($search); ?>">
                     <?php if ($search != ""): ?>
-                        <button type="button" class="tambah-button" onclick="window.location.href='mahasiswa.php'">Reset</button>
+                        <button type="button" class="tambah-button" onclick="window.location.href='tambah_obat.php'">Reset</button>
                     <?php else: ?>
                         <button type="submit" class="tambah-button">Cari</button>
                     <?php endif; ?>
@@ -167,49 +214,44 @@
         </div>
         <!-- Header dengan judul di kiri dan tombol add di kanan -->
         <div class="table-header">
-            <h1>Data Staff</h1>
-            <button class="tambah-button" onclick="window.location.href='tambah.php'">Tambah Staff</button>
+            <h1>Data Obat</h1>
+            <button class="tambah-button" onclick="window.location.href='tambah_obat.php'">Tambah Obat</button>
         </div>
-        <div class="table-container">
-            <table border="1" cellpadding="5" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>No.</th>
-                        <th>Nama</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Tarri Peritha Westi</td>
-                        <td>tarripewe</td>
-                        <td>tarri@example.com</td>
-                        <td>Admin</td>
-                        <td>
-                            <button class='edit-button' onclick="window.location.href='edit_user.php?id=1'">Edit</button>
 
-                            <button class='hapus-button'>Hapus</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Andi Saputra</td>
-                        <td>andis</td>
-                        <td>andi@example.com</td>
-                        <td>Kasir</td>
-                        <td>
-                            <button class='edit-button' onclick="window.location.href='edit_user.php?id=2'">Edit</button>
+        <body>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Kode</th>
+                            <th>Nama</th>
+                            <th>Jenis</th>
+                            <th>Kategori</th>
+                            <th>Harga Jual</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>TB001</td>
+                            <td>Paracetamol</td>
+                            <td>Tablet</td>
+                            <td>Obat Bebas</td>
+                            <td>Rp 5.000,-</td>
+                            <td>
+                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=1'">Edit</button>
+                                <!-- <button class='edit-button' onclick="window.location.href='tambah_obat.php'">Edit</button> -->
 
-                            <button class='hapus-button'>Hapus</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                                <button class='hapus-button'>Hapus</button>
+                            </td>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
     </div>
 </body>
 
