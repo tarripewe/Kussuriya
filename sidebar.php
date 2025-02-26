@@ -55,14 +55,17 @@
     <div class="sidebar">
         <h3><i class="bi bi-capsule-pill"></i> KUSSURIYA</h3>
         <h4>Hello, Tarri!</h4>
-        <a href="mahasiswa.php" class="<?= basename($_SERVER['PHP_SELF']) == 'mahasiswa.php' ? 'active' : '' ?>">
+        <a href="penjualan.php" class="<?= basename($_SERVER['PHP_SELF']) == 'penjualan.php' ? 'active' : '' ?>">
             <i class="bi bi-cart-fill"></i> Penjualan
         </a>
-        <a href="laporan.php" class="<?= basename($_SERVER['PHP_SELF']) == 'laporan.php' ? 'active' : '' ?>">
+        <a href="pembelian.php" class="<?= basename($_SERVER['PHP_SELF']) == 'pembelian.php' ? 'active' : '' ?>">
             <i class="bi bi-bag-fill"></i> Pembelian
         </a>
-        <a href="laporan.php" class="<?= basename($_SERVER['PHP_SELF']) == 'laporan.php' ? 'active' : '' ?>">
+        <a href="supplier.php" class="<?= basename($_SERVER['PHP_SELF']) == 'supplier.php' ? 'active' : '' ?>">
             <i class="bi bi-truck"></i> Supplier
+        </a>
+        <a href="pelanggan.php" class="<?= basename($_SERVER['PHP_SELF']) == 'pelanggan.php' ? 'active' : '' ?>">
+            <i class="bi bi-person-badge"></i> Pelanggan
         </a>
         <a href="user.php" class="<?= basename($_SERVER['PHP_SELF']) == 'user.php' ? 'active' : '' ?>">
             <i class="bi bi-people-fill"></i> Users

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 
@@ -157,7 +156,7 @@
         <div class="search-container">
             <form class="search-form" method="GET" action="user.php">
                 <div class="input-group">
-                    <input type="text" class="form-control" name="q" placeholder="Cari Kode atau Nama Obat..." value="<?php echo htmlspecialchars($search); ?>">
+                    <input type="text" class="form-control" name="q" placeholder="Cari Nama atau Supplier..." value="<?php echo htmlspecialchars($search); ?>">
                     <?php if ($search != ""): ?>
                         <button type="button" class="tambah-button" onclick="window.location.href='tambah_obat.php'">Reset</button>
                     <?php else: ?>
@@ -168,8 +167,8 @@
         </div>
         <!-- Header dengan judul di kiri dan tombol add di kanan -->
         <div class="table-header">
-            <h1>Data Obat</h1>
-            <button class="tambah-button" onclick="window.location.href='tambah_obat.php'">Tambah Obat</button>
+            <h1>Data Supplier</h1>
+            <button class="tambah-button" onclick="window.location.href='tambah_supplier.php'">Tambah Supplier</button>
         </div>
 
         <body>
@@ -178,79 +177,123 @@
                     <thead>
                         <tr>
                             <th>No.</th>
-                            <th>Kode</th>
                             <th>Nama</th>
-                            <th>Jenis</th>
-                            <th>Kategori</th>
-                            <th>Harga Jual</th>
+                            <th>Supplier</th>
+                            <th>Kontak</th>
+                            <th>Alamat</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>TB001</td>
-                            <td>Paracetamol</td>
-                            <td>Tablet</td>
-                            <td>Obat Bebas</td>
-                            <td>Rp 5.000,-</td>
+                            <td>Andi Saputra</td>
+                            <td>Kimia Farma</td>
+                            <td>081234567890</td>
+                            <td>Jl. Merdeka No. 10, Jakarta</td>
                             <td>
                                 <button class='edit-button' onclick="window.location.href='edit_obat.php?id=1'">Edit</button>
                                 <button class='hapus-button'>Hapus</button>
                             </td>
-
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>KP001</td>
-                            <td>Amoxicillin</td>
-                            <td>Kapsul</td>
-                            <td>Antibiotik</td>
-                            <td>Rp 15.000,-</td>
+                            <td>Siti Rahma</td>
+                            <td>Bio Farma</td>
+                            <td>081298765432</td>
+                            <td>Jl. Sudirman No. 25, Bandung</td>
                             <td>
-                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=1'">Edit</button>
+                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=2'">Edit</button>
                                 <button class='hapus-button'>Hapus</button>
                             </td>
-
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>TB002</td>
-                            <td>Vitamin C 500mg</td>
-                            <td>Tablet</td>
-                            <td>Suplemen</td>
-                            <td>Rp 10.000,-</td>
+                            <td>Budi Santoso</td>
+                            <td>Sanbe Farma</td>
+                            <td>081376543210</td>
+                            <td>Jl. Ahmad Yani No. 15, Surabaya</td>
                             <td>
-                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=1'">Edit</button>
+                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=3'">Edit</button>
                                 <button class='hapus-button'>Hapus</button>
                             </td>
-
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>CR001</td>
-                            <td>Betadine</td>
-                            <td>Cair</td>
-                            <td>Antiseptik</td>
-                            <td>Rp 20.000,-</td>
+                            <td>Rina Wijaya</td>
+                            <td>Dexa Medica</td>
+                            <td>082134567890</td>
+                            <td>Jl. Diponegoro No. 5, Yogyakarta</td>
                             <td>
-                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=1'">Edit</button>
+                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=4'">Edit</button>
                                 <button class='hapus-button'>Hapus</button>
                             </td>
-
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td>SP001</td>
-                            <td>Salep Kortikosteroid</td>
-                            <td>Salep</td>
-                            <td>Obat Kulit</td>
-                            <td>Rp 18.000,-</td>
+                            <td>Faisal Hidayat</td>
+                            <td>Novell Pharmaceutical</td>
+                            <td>082198765432</td>
+                            <td>Jl. Gatot Subroto No. 8, Semarang</td>
                             <td>
-                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=1'">Edit</button>
+                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=5'">Edit</button>
                                 <button class='hapus-button'>Hapus</button>
                             </td>
-
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Nurul Aini</td>
+                            <td>Kalbe Farma</td>
+                            <td>081356789012</td>
+                            <td>Jl. Hasanuddin No. 14, Medan</td>
+                            <td>
+                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=6'">Edit</button>
+                                <button class='hapus-button'>Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Adi Pratama</td>
+                            <td>Guardian Pharma</td>
+                            <td>081267890123</td>
+                            <td>Jl. Pahlawan No. 20, Makassar</td>
+                            <td>
+                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=7'">Edit</button>
+                                <button class='hapus-button'>Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Lina Sari</td>
+                            <td>Meiji Seika</td>
+                            <td>082345678901</td>
+                            <td>Jl. Malioboro No. 30, Yogyakarta</td>
+                            <td>
+                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=8'">Edit</button>
+                                <button class='hapus-button'>Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Rizky Maulana</td>
+                            <td>Pharos Indonesia</td>
+                            <td>081478902345</td>
+                            <td>Jl. Asia Afrika No. 50, Bandung</td>
+                            <td>
+                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=9'">Edit</button>
+                                <button class='hapus-button'>Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Fatimah Zahra</td>
+                            <td>Bayer Indonesia</td>
+                            <td>081589012345</td>
+                            <td>Jl. Veteran No. 75, Surabaya</td>
+                            <td>
+                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=10'">Edit</button>
+                                <button class='hapus-button'>Hapus</button>
+                            </td>
                         </tr>
 
                     </tbody>

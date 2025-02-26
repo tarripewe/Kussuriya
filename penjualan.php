@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Obat</title>
+    <title>Data Staff</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Sertakan Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -157,9 +156,9 @@
         <div class="search-container">
             <form class="search-form" method="GET" action="user.php">
                 <div class="input-group">
-                    <input type="text" class="form-control" name="q" placeholder="Cari Kode atau Nama Obat..." value="<?php echo htmlspecialchars($search); ?>">
+                    <input type="text" class="form-control" name="q" placeholder="Cari Kustomer, Kode atau Produk..." value="<?php echo htmlspecialchars($search); ?>">
                     <?php if ($search != ""): ?>
-                        <button type="button" class="tambah-button" onclick="window.location.href='tambah_obat.php'">Reset</button>
+                        <button type="button" class="tambah-button" onclick="window.location.href='mahasiswa.php'">Reset</button>
                     <?php else: ?>
                         <button type="submit" class="tambah-button">Cari</button>
                     <?php endif; ?>
@@ -168,95 +167,74 @@
         </div>
         <!-- Header dengan judul di kiri dan tombol add di kanan -->
         <div class="table-header">
-            <h1>Data Obat</h1>
-            <button class="tambah-button" onclick="window.location.href='tambah_obat.php'">Tambah Obat</button>
+            <h1>Data Penjualan</h1>
+            <!-- <button class="tambah-button" onclick="window.location.href='tambah.php'">Tambah Staff</button> -->
         </div>
+        <div class="table-container">
+            <table border="1" cellpadding="5" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Kustomer</th>
+                        <th>Kode</th>
+                        <th>Produk</th>
+                        <th>Harga</th>
+                        <th>Unit</th>
+                        <th>Total</th>
 
-        <body>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>No.</th>
-                            <th>Kode</th>
-                            <th>Nama</th>
-                            <th>Jenis</th>
-                            <th>Kategori</th>
-                            <th>Harga Jual</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>TB001</td>
-                            <td>Paracetamol</td>
-                            <td>Tablet</td>
-                            <td>Obat Bebas</td>
-                            <td>Rp 5.000,-</td>
-                            <td>
-                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=1'">Edit</button>
-                                <button class='hapus-button'>Hapus</button>
-                            </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Andi Saputra</td>
+                        <td>TRX001</td>
+                        <td>Paracetamol 500mg</td>
+                        <td>Rp 15.000</td>
+                        <td>2</td>
+                        <td>Rp 30.000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Siti Rahma</td>
+                        <td>TRX002</td>
+                        <td>Vitamin C 1000mg</td>
+                        <td>Rp 25.000</td>
+                        <td>1</td>
+                        <td>Rp 25.000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Budi Santoso</td>
+                        <td>TRX003</td>
+                        <td>Amoxicillin 500mg</td>
+                        <td>Rp 20.000</td>
+                        <td>3</td>
+                        <td>Rp 60.000</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Rina Wijaya</td>
+                        <td>TRX004</td>
+                        <td>Loperamide 2mg</td>
+                        <td>Rp 10.000</td>
+                        <td>4</td>
+                        <td>Rp 40.000</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Faisal Hidayat</td>
+                        <td>TRX005</td>
+                        <td>Ibuprofen 400mg</td>
+                        <td>Rp 18.000</td>
+                        <td>2</td>
+                        <td>Rp 36.000</td>
+                    </tr>
 
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>KP001</td>
-                            <td>Amoxicillin</td>
-                            <td>Kapsul</td>
-                            <td>Antibiotik</td>
-                            <td>Rp 15.000,-</td>
-                            <td>
-                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=1'">Edit</button>
-                                <button class='hapus-button'>Hapus</button>
-                            </td>
 
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>TB002</td>
-                            <td>Vitamin C 500mg</td>
-                            <td>Tablet</td>
-                            <td>Suplemen</td>
-                            <td>Rp 10.000,-</td>
-                            <td>
-                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=1'">Edit</button>
-                                <button class='hapus-button'>Hapus</button>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>CR001</td>
-                            <td>Betadine</td>
-                            <td>Cair</td>
-                            <td>Antiseptik</td>
-                            <td>Rp 20.000,-</td>
-                            <td>
-                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=1'">Edit</button>
-                                <button class='hapus-button'>Hapus</button>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>SP001</td>
-                            <td>Salep Kortikosteroid</td>
-                            <td>Salep</td>
-                            <td>Obat Kulit</td>
-                            <td>Rp 18.000,-</td>
-                            <td>
-                                <button class='edit-button' onclick="window.location.href='edit_obat.php?id=1'">Edit</button>
-                                <button class='hapus-button'>Hapus</button>
-                            </td>
-
-                        </tr>
-
-                    </tbody>
-
-                </table>
-            </div>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 

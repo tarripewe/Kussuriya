@@ -168,7 +168,7 @@
         <!-- Header dengan judul di kiri dan tombol add di kanan -->
         <div class="table-header">
             <h1>Data Staff</h1>
-            <button class="tambah-button" onclick="window.location.href='tambah.php'">Tambah Staff</button>
+            <button class="tambah-button" onclick="window.location.href='tambah_user.php'">Tambah Staff</button>
         </div>
         <div class="table-container">
             <table border="1" cellpadding="5" cellspacing="0">
